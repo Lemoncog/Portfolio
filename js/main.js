@@ -1,16 +1,6 @@
 console.log("main..");
 
-var Tweet = Backbone.Model.extend({
-	defaults : function() {
-		return {
-			username : "Lemoncog",
-			message : "Hello",
-			imageURL : "https://pbs.twimg.com/profile_images/440786240720232448/gHL_Cau__bigger.jpeg"
-		};
-	}
-});
-
-console.log("Tweet=" + Tweet);
+var Tweet = Backbone.Model.extend({});
 
 var TweetList = Backbone.Collection.extend({
 	model : Tweet,
@@ -20,15 +10,15 @@ var TweetList = Backbone.Collection.extend({
 	},
 });
 
-console.log("TweetList=" + TweetList);
+var tweetTemplate = $("#tweet-item-template").html();
+console.log("tweetTemplate=" + tweetTemplate);
 
-var TweetView = Backbone.View.extend({
+var TweetView = Backbone.View.extend({	
 		initialize : function() {
-			this.render();
 		},
 		
-		 render: function() { 		 	
-		  	return "<p>"+this.model+"</p>";
+		 render: function() { 		 			 			 			 	
+		  	return _.template(tweetTemplate, ({ message : this.model.message }));
   		}
 });
 
@@ -48,17 +38,13 @@ var TwitterView = Backbone.View.extend({
 		
 		this.collection.fetch({
 			success : function(collection, response) {
-				console.log('Collection fetch success', response);
-				console.log('Collection models: ', collection.models);
-				
 				_.each(that.collection.models, function (item){
-					that.renderApp(item);
+					that.renderApp(item.toJSON());
 				}, that);
 				
 			},
 			error : function(collection, response) {
 				throw new Error("Twitter fetch error" + response.responseText);
-
 			}
 		});
 	},
@@ -67,8 +53,8 @@ var TwitterView = Backbone.View.extend({
 		var tweetView = new TweetView({
 				model: item
 		});
-		
-		this.$el.append(tweetView.render());
+								
+		this.$el.append( tweetView.render() );
 	}
 });
 

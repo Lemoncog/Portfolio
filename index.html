@@ -38,11 +38,24 @@
 				<div class="row">
 					<div class="col-md-6">
 						<h2>Say</h2>
-						<div id="twitter-feed"></div>
+						<div id="twitter-feed">
+							<script type="text/template" id="tweet-item-template">
+								<div class="twitter-item">
+									<h3><%= message %></h3>
+								</div>
+							</script>
+						</div>
 					</div>
 					<div class="col-md-6">
 						<h2>Make</h2>
-						<div id="project-feed"></div>
+						<div id="project-feed">
+							<script type="text/template" id="project-item-template">
+								<div class="card-item">
+								<div class="card-item-header"><img class="icon" src=<%= imageUrl %>/><b class="title"><%= title %></b><b class="title-extra">-<%= description %></b></div>
+								<p class="card-item-description"><b><%= description %></b></p>
+								</div>
+							</script>
+						</div>
 					</div>
 				</div>
 				<hr>
@@ -60,14 +73,14 @@
 		<script>
 			window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')
 		</script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/underscore.js"></script>
+		<script src="js/vendor/backbone.js"></script>
 		<script>
 			$(document).ready(function() {
 				$.getScript("js/main.js");
 			});
 		</script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/vendor/underscore.js"></script>
-		<script src="js/vendor/backbone.js"></script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
