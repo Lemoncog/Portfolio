@@ -4,7 +4,7 @@ var Tweet = Backbone.Model.extend({});
 
 var TweetList = Backbone.Collection.extend({
 	model : Tweet,
-	url : 'http://twitfeeder.herokuapp.com/userTweets',
+	url : 'http://twitfeeder.herokuapp.com/userTweets?callback=?',
 
 	initialize : function() {
 	},
@@ -38,12 +38,18 @@ var TwitterView = Backbone.View.extend({
 		
 		this.collection.fetch({
 			success : function(collection, response) {
+				console.log("+++++++SUCESS+++++++++++");
 				_.each(that.collection.models, function (item){
 					that.renderApp(item.toJSON());
 				}, that);
 				
 			},
 			error : function(collection, response) {
+				console.log("#######ERROR###########");
+				console.log(collection.toJSON());
+				console.log(response);
+				console.log(response.responseText);
+				
 				throw new Error("Twitter fetch error" + response.responseText);
 			}
 		});
@@ -59,3 +65,4 @@ var TwitterView = Backbone.View.extend({
 });
 
 twitterView = new TwitterView();
+
