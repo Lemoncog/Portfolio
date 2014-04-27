@@ -4,7 +4,7 @@ var Tweet = Backbone.Model.extend({});
 
 var TweetList = Backbone.Collection.extend({
 	model : Tweet,
-	url : 'data/mockTweets.json',
+	url : 'http://twitfeeder.herokuapp.com/userTweets',
 
 	initialize : function() {
 	},
@@ -18,7 +18,7 @@ var TweetView = Backbone.View.extend({
 		},
 		
 		 render: function() { 		 			 			 			 	
-		  	return _.template(tweetTemplate, ({ message : this.model.message }));
+		  	return _.template(tweetTemplate, ({ message : this.model.text }));
   		}
 });
 
