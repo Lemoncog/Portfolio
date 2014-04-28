@@ -21,7 +21,6 @@ var TweetView = Backbone.View.extend({
 });
 
 var TwitterView = Backbone.View.extend({
-	tagName : "li",
 	el : '#twitter-feed',
 
 	initialize : function() {
@@ -36,18 +35,14 @@ var TwitterView = Backbone.View.extend({
 		
 		this.collection.fetch({
 			success : function(collection, response) {
-				console.log("+++++++SUCESS+++++++++++");
+				console.log("+++++++SUCCESS+++++++++++");
 				_.each(that.collection.models, function (item){
 					that.renderApp(item.toJSON());
 				}, that);
 				
 			},
 			error : function(collection, response) {
-				console.log("#######ERROR###########");
-				console.log(collection.toJSON());
-				console.log(response);
-				console.log(response.responseText);
-				
+				console.log("#######ERROR###########");				
 				throw new Error("Twitter fetch error" + response.responseText);
 			}
 		});
@@ -57,7 +52,8 @@ var TwitterView = Backbone.View.extend({
 		var tweetView = new TweetView({
 				model: item
 		});
-								
+							
+		var container = document.createDocumentFragment();	
 		this.$el.append( tweetView.render() ).hide().fadeIn().slideDown();
 	}
 });
