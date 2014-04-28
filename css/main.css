@@ -1,5 +1,4 @@
 
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -37,6 +36,10 @@ body
 	margin-left: 10px;
 }
 
+.card-item .title-extra
+{
+	color : rgba(107, 107, 107, 0.99);
+}
 
 .card-item-header
 {
@@ -55,11 +58,10 @@ body
     font-size: 20px;
 }
 
-.card-item-header .title-extra
+.card-item-header
 {
     margin-left: 5px;
     font-size: 18px; 
-    text-overflow: ellipsis;
 }
 
 
