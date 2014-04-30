@@ -1,0 +1,15 @@
+{
+ "devDependencies": {
+    "supertest": "^0.9.0",
+    "mocha": "^1.18.0",
+    "gulp": "^3.6.0",
+    "gulp-sass": "^0.7.1",
+    "browserstack-webdriver": "^2.39.2",
+    "nightwatch": "^0.4.7",
+    "gulp-ember-handlebars": "~0.6.0",
+    "gulp-concat": "~2.2.0",
+    "gulp-uglify": "~0.2.1",
+    "should": "^3.3.0",
+    "chai": "^1.9.1"
+  }
+}

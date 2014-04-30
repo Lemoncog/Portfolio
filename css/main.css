@@ -1,75 +1,37 @@
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-.navbar-brand:hover,
-.navbar-brand:focus {
-}
+body {
+  padding-top: 30px; }
 
-body
-{
-	padding-top : 30px;
-}
+.twitter-item h3 {
+  font-size: 20px;
+  text-align: left;
+  color: #6b6b6b; }
 
-.twitter-item h3
-{
-	font-size: 20px;
-	text-align : left;
-	color : rgba(107, 107, 107, 0.99);
-}
+.card-item {
+  height: 58px;
+  line-height: 18px;
+  margin-left: 58px; }
 
-.card-item
-{
-	height : 58px;
-    line-height : 18px;
-    margin-left: 58px;
-}
+.card-item #root {
+  margin-top: 20px;
+  margin-bottom: 10px; }
 
-.card-item #root
-{
-	margin-top : 20px;
-	margin-bottom : 10px;
-}
+.card-item b {
+  margin-left: 10px; }
 
-.card-item b
-{
-	margin-left: 10px;
-}
-
-.card-item .title-extra
-{
-	color : rgba(107, 107, 107, 0.99);
-}
-
-.card-item-header
-{
-}
-
-.card-item .icon 
-{
-    width : 58px;
-    margin-left: -58px;
-    height: auto;
-    float : left;
-}
-
-.card-item-header b
-{
-    font-size: 20px;
-}
-
-.card-item-header
-{
-    margin-left: 5px;
-    font-size: 18px; 
-}
+.card-item .title-extra {
+  color: #6b6b6b; }
 
 
+.card-item .icon {
+  width: 58px;
+  margin-left: -58px;
+  height: auto;
+  float: left; }
 
+.card-item-header b {
+  font-size: 20px; }
 
-
-
-
-
-
-
+.card-item-header {
+  margin-left: 5px;
+  font-size: 18px; }
