@@ -32,9 +32,13 @@
 					<h1>What I....</h1>
 				</div>
 			</div>
-
 			<div class="container">
-				<!-- Example row of columns -->
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Know</h2>
+						<div class="loremFill"></div>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-md-6">
 						<h2>Make</h2>
@@ -86,6 +90,7 @@
 		<script>
 			$(document).ready(function() {
 				$.getScript("js/main.js");
+				$.getScript("js/loremIpsumFiller.js")
 				$.getScript("js/controllers/projects.js");
 				$.getScript("js/controllers/twitter.js");
 			});
