@@ -36,7 +36,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h2>Know</h2>
-						<div class="loremFill"></div>
+						<div id="knowledge-feed"></div>
 					</div>
 				</div>
 				<div class="row">
@@ -87,13 +87,27 @@
 		<script src="js/vendor/bootstrap.min.js"></script>
 		<script src="js/vendor/underscore.js"></script>
 		<script src="js/vendor/backbone.js"></script>
+		<script src="js/vendor/d3.js"></script>
+		<script src="js/vendor/d3.layout.cloud.js"></script>
 		<script>
 			$(document).ready(function() {
-				$.getScript("js/main.js");
 				$.getScript("js/loremIpsumFiller.js")
 				$.getScript("js/controllers/projects.js");
 				$.getScript("js/controllers/twitter.js");
+				$.getScript("js/controllers/knowledge.js");
+				$.getScript("js/main.js");
 			});
+			
+			var id;
+			$(window).resize(function() {
+			    clearTimeout(id);
+			    id = setTimeout(doneResizing, 500);
+			    
+			});
+			
+			function doneResizing(){
+			  	$.getScript("js/main.js");   
+			}
 		</script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
