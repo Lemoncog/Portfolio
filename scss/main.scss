@@ -1,5 +1,4 @@
 $primary-color: rgba(107, 107, 107, 1);
-
 .navbar-brand:hover,
 .navbar-brand:focus {
 }
@@ -18,9 +17,8 @@ body
 
 .card-item
 {
-	height : 58px;
-    line-height : 18px;
-    margin-left: 58px;
+  line-height : 18px;
+  margin-left: 58px;
 }
 
 .card-item #root
@@ -31,7 +29,6 @@ body
 
 .card-item b
 {
-	margin-left: 10px;
 }
 
 .card-item .title-extra
@@ -46,7 +43,7 @@ body
 .card-item .icon 
 {
     width : 58px;
-    margin-left: -58px;
+    margin-left: -60px;
     height: auto;
     float : left;
 }
@@ -58,7 +55,6 @@ body
 
 .card-item-header
 {
-    margin-left: 5px;
     font-size: 18px; 
 }
 

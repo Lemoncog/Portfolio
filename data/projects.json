@@ -6,12 +6,13 @@
             "javascript",
             "backbone.js",
             "underscore.js",
+            "sass",
             "node.js",
             "express.js"
         ]
     },
     {
-        "title": "Portfolio",
+        "title": "Another Portfolio",
         "description": "This site you are looking at",
         "technologies": [
             "javascript",
