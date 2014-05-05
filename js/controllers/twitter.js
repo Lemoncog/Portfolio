@@ -11,12 +11,20 @@ var TweetList = Backbone.Collection.extend({
 var tweetTemplate = $("#tweet-item-template").html();
 console.log("tweetTemplate=" + tweetTemplate);
 
+
+var linkifyOptions = 
+{
+	callback: function( text, href ) {
+		 return href ? '<a href="' + href + '" title="' + href + '" target="_blank">' + text + '</a>' : text;
+	}
+};
+
 var TweetView = Backbone.View.extend({	
 		initialize : function() {
 		},
 		
 		 render: function() { 		 			 			 			 	
-		  	return _.template(tweetTemplate, ({ message : this.model.text }));
+		  	return _.template(tweetTemplate, ({ message : linkify(this.model.text, linkifyOptions) }));
   		}
 });
 
