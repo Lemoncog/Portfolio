@@ -35,7 +35,7 @@ var TwitterView = Backbone.View.extend({
 		this.collection = new TweetList();
 		this.render();
 	},
-
+	
 	render : function() {
 		console.log("Fetching tweets");
 		

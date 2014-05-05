@@ -14,11 +14,35 @@ var projectTemplate = $("#project-item-template").html();
 console.log("projectTemplate=" + projectTemplate);
 
 var ProjectItemView = Backbone.View.extend({	
+		template : _.template(projectTemplate),
+	
 		initialize : function() {
+			//_.bindAll(this);
+			console.log("init ran");  
 		},
 		
-		 render: function() { 		 			 			 			 	
-		  	return _.template(projectTemplate, ({ imageUrl : "img/github.png",  title : this.model.title, description : this.model.description, technologies : this.model.technologies }));
+			
+		events : {
+			"click " : "projectClickHandler"
+		},
+		
+		projectClickHandler : function(event) {
+			console.log("I felt that! = " + this.model.link);
+			
+			window.open(this.model.link,'_blank');
+			
+			return false;
+		},
+				
+		 render: function() {
+		 	
+		 	console.log("this.$el" + this.$el);   
+		 	
+		 	this.$el.html( this.template(({ imageUrl : "img/github.png",  title : this.model.title, description : this.model.description, technologies : this.model.technologies })) );
+		 	
+		 	console.log("this.$el" + this.$el.html);
+		 	
+		 	return this.$el;		 			 			 			 	
   		}
 });
 

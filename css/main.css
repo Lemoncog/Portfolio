@@ -11,6 +11,9 @@ body {
   line-height: 18px;
   margin-left: 58px; }
 
+.card-item:hover {
+  background-color: rgba(107, 107, 107, 0.2); }
+
 .card-item #root {
   margin-top: 20px;
   margin-bottom: 10px; }
