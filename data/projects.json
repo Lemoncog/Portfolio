@@ -2,7 +2,7 @@
     {
         "title": "Portfolio",
         "description": "This site you are looking at",
-        "link" : "http://lemoncog.github.io/Portfolio/",
+        "link" : "https://github.com/Lemoncog/Portfolio",
         "technologies": [
             "javascript",
             "backbone.js",
