@@ -3,7 +3,7 @@
         "title": "Portfolio",
         "description": "This site you are looking at",
         "img" : "img/github.png",
-        "link" : "http://lemoncog.github.io/Portfolio/",
+        "link" : "https://github.com/Lemoncog/Portfolio",
         "technologies": [
             "javascript",
             "backbone.js",
