@@ -2,6 +2,7 @@
     {
         "title": "Portfolio",
         "description": "This site you are looking at",
+        "img" : "img/github.png",
         "link" : "http://lemoncog.github.io/Portfolio/",
         "technologies": [
             "javascript",
@@ -15,11 +16,24 @@
     {
         "title": "Message Delay Express",
         "description": "Communication utility application. It allows you to send messages at specific dates and intervals using a event based system.",
+        "img" : "img/github.png",
         "link" : "https://play.google.com/store/apps/details?id=com.lemoncog.messageDelayExpress",
         "technologies": [
         	"Java",
             "Android",
             "Libgdx"
+        ]
+    },
+    {
+        "title": "Skimmer",
+        "description": "Android/iOS game. Skimmer has a simple game-play mechanic, Skimming. By flying within the outer layer of a planet you can skim that planet. Try it!",
+        "img" : "img/skimmer_icon.png",
+        "link" : "https://play.google.com/store/apps/details?id=com.lemoncog.skimmer",
+        "technologies": [
+        	"Java",
+            "Android",
+            "Libgdx",
+            "RoboVM"
         ]
     }
 ]

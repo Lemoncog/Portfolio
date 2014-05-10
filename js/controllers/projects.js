@@ -38,7 +38,7 @@ var ProjectItemView = Backbone.View.extend({
 		 	
 		 	console.log("this.$el" + this.$el);   
 		 	
-		 	this.$el.html( this.template(({ imageUrl : "img/github.png",  title : this.model.title, description : this.model.description, technologies : this.model.technologies })) );
+		 	this.$el.html( this.template(({ imageUrl : this.model.img,  title : this.model.title, description : this.model.description, technologies : this.model.technologies })) );
 		 	
 		 	console.log("this.$el" + this.$el.html);
 		 	
