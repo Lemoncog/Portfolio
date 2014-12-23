@@ -1,1 +1,24 @@
-["Java", "Objective-C", "Javascript", "J2ME", "Android", "iOS", "BlackBerry", "Backbone.js", "Angular.js", "Sass", "Git", "P4", "SVN", "Cornerstone", "Perforce", "Android Studio", "Eclipse", "Agile", "TDD", "Robolectric", "Mockito"]
+[
+  "Android",
+  "iOS",
+  "TDD",
+  "Agile",
+  "Objective-C",
+  "Java",
+  "Javascript",
+  "Polymer",
+  "Backbone.js",
+  "Angular.js",
+  "Sass",
+  "Android Studio",
+  "Eclipse",
+  "Git",
+  "P4",
+  "SVN",
+  "Cornerstone",
+  "Perforce",
+  "Robolectric",
+  "Mockito",
+  "J2ME",
+  "BlackBerry"
+]
